@@ -8,6 +8,8 @@ public class PiratesOfTheCuesApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(PiratesOfTheCuesApplication.class, args);
+		
+	System.out.print("Hello");
 	}
 
 }
