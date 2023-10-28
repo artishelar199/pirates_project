@@ -28,15 +28,31 @@ public class Controller {
 
 	@GetMapping("/getEmployeeByPrimarySkill/{primarySkill}")
 	public ResponseEntity<Response> getByPrimarySkill(@PathVariable("primarySkill") String primarySkill){
-		System.out.println("hello");
 		Response response = empService.getEmployeeByPrimarySkill(primarySkill);
 		return ResponseEntity.ok(response);
 	}
 	
 	@GetMapping("/getEmployeeBySecondarySkill/{secondarySkill}")
 	public ResponseEntity<Response> getBySecondarySkill(@PathVariable("secondarySkill") String secondarySkill){
-		System.out.println("hello");
 		Response response = empService.getEmployeeBySecondarySkill(secondarySkill);
+		return ResponseEntity.ok(response);
+	}
+	
+	@GetMapping("/getEmployeeByTertiarySkill/{tertiarySkill}")
+	public ResponseEntity<Response> getByTertiarySkill(@PathVariable("tertiarySkill") String tertiarySkill){
+		Response response = empService.getEmployeeByTertiarySkill(tertiarySkill);
+		return ResponseEntity.ok(response);
+	}
+	
+	@GetMapping("/getEmployeeByGrade/{grade}")
+	public ResponseEntity<Response> getByGrade(@PathVariable("grade") String grade){
+		Response response = empService.getEmployeeByGrade(grade);
+		return ResponseEntity.ok(response);
+	}
+	
+	@GetMapping("/getEmployeeByExperience/{experience}")
+	public ResponseEntity<Response> getByExperience(@PathVariable("experience") String experience){
+		Response response = empService.getEmployeeByExperience(experience);
 		return ResponseEntity.ok(response);
 	}
 }

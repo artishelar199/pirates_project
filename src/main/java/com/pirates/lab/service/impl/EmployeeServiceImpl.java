@@ -63,5 +63,49 @@ public class EmployeeServiceImpl implements EmployeeService{
 				.build());
 		return response;
 	}
-
+	
+	@Override
+	public Response getEmployeeByTertiarySkill(String tertiarySkill) {
+		Response response = new Response();
+		Status status = new Status();
+		Data data = new Data<List<Employee>>();
+		data.setValue(empRepo.findEmployeeByTertiarySkill(tertiarySkill));
+		response.setData(data);
+		response.setStatus(Status.builder()
+				.httpCode(200)
+				.message("Success")
+				.description("success")
+				.build());
+		return response;
+	}
+	
+	@Override
+	public Response getEmployeeByGrade(String grade) {
+		Response response = new Response();
+		Status status = new Status();
+		Data data = new Data<List<Employee>>();
+		data.setValue(empRepo.findEmployeeByGrade(grade));
+		response.setData(data);
+		response.setStatus(Status.builder()
+				.httpCode(200)
+				.message("Success")
+				.description("success")
+				.build());
+		return response;
+	}
+	
+	@Override
+	public Response getEmployeeByExperience(String experience) {
+		Response response = new Response();
+		Status status = new Status();
+		Data data = new Data<List<Employee>>();
+		data.setValue(empRepo.findEmployeeByExperience(experience));
+		response.setData(data);
+		response.setStatus(Status.builder()
+				.httpCode(200)
+				.message("Success")
+				.description("success")
+				.build());
+		return response;
+	}
 }

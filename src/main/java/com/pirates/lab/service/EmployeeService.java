@@ -9,4 +9,10 @@ public interface EmployeeService {
 	public Response getEmployeeByPrimarySkill(String primarySkill);
 	
 	public Response getEmployeeBySecondarySkill(String secondarySkill);
+	
+	public Response getEmployeeByTertiarySkill(String tertiarySkill);
+	
+	public Response getEmployeeByGrade(String grade);
+	
+	public Response getEmployeeByExperience(String experience);
 }
