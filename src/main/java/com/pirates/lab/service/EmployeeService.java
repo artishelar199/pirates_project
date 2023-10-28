@@ -7,4 +7,6 @@ public interface EmployeeService {
 	public Response getAllEmployees();
 
 	public Response getEmployeeByPrimarySkill(String primarySkill);
+	
+	public Response getEmployeeBySecondarySkill(String secondarySkill);
 }

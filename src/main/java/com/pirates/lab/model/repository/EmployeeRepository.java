@@ -17,4 +17,7 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer>{
 
 	@Query(value = "select * from employee e where e.primary_skill = :primarySkill", nativeQuery = true)
 	public List<Employee> findEmployeeByPrimarySkill(@Param("primarySkill") String primarySkill);
+	
+	@Query(value = "select * from employee e where e.secondary_skill = :secondarySkill", nativeQuery = true)
+	public List<Employee> findEmployeeBySecondarySkill(@Param("secondarySkill") String secondarySkill);
 }

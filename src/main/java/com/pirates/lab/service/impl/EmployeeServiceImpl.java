@@ -49,4 +49,19 @@ public class EmployeeServiceImpl implements EmployeeService{
 		return response;
 	}
 
+	@Override
+	public Response getEmployeeBySecondarySkill(String secondarySkill) {
+		Response response = new Response();
+		Status status = new Status();
+		Data data = new Data<List<Employee>>();
+		data.setValue(empRepo.findEmployeeBySecondarySkill(secondarySkill));
+		response.setData(data);
+		response.setStatus(Status.builder()
+				.httpCode(200)
+				.message("Success")
+				.description("success")
+				.build());
+		return response;
+	}
+
 }
