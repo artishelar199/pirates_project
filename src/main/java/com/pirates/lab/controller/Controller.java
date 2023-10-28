@@ -36,7 +36,7 @@ public class Controller {
 	@GetMapping("/getEmployeeBySecondarySkill/{secondarySkill}")
 	public ResponseEntity<Response> getBySecondarySkill(@PathVariable("secondarySkill") String secondarySkill){
 		System.out.println("hello");
-		Response response = empService.getEmployeeByPrimarySkill(secondarySkill);
+		Response response = empService.getEmployeeBySecondarySkill(secondarySkill);
 		return ResponseEntity.ok(response);
 	}
 }
