@@ -16,7 +16,7 @@ import com.pirates.lab.model.entity.Employee;
 
 @RestController
 @RequestMapping("/api/pirates")
-public class Controller {
+public class EmployeeController {
 
 	@Autowired
 	private EmployeeService empService;
